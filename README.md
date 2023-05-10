@@ -1,7 +1,7 @@
 # ExposeStaticEDL
 This integration fetches a static file via SCP from a remote server and exposes the file to a specified port (static EDL, file display, etc)
 
-he new integration will need the creation of a new docker container image
+This integration will require the creation of a new docker container image
 
     /docker_image_create name=mypyexpose base="demisto/python3-deb:3.8.2.6981" dependencies=bottle,paramiko,scp
 
