@@ -13,7 +13,6 @@ What's not working:
 * Auto restart and fetch file on remote file change
 
 Known Issues:
-* None (as of 10 May)
 * https://github.com/johestephan/ExposeStaticEDL-XSOAR/issues
 
 Usage:
