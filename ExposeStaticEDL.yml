@@ -71,7 +71,7 @@ script:
         edl = open(file, 'r')
         ThisEDL = edl.read()
         edl.close()
-        response.content_type = 'text/text; charset=UTF8'
+        response.content_type = 'text/plain; charset=UTF8'
         return str(ThisEDL)
 
 
