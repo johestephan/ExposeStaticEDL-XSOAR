@@ -3,7 +3,7 @@ This integration fetches a static file via SCP from a remote server and exposes 
 
 This integration will require the creation of a new docker container image
 
-    /docker_image_create name=mypyexpose base="demisto/python3-deb:3.8.2.6981" dependencies=bottle,paramiko,scp
+    /docker_image_create name=demisto/scptoedl:latest base="demisto/python3-deb:3.8.2.6981" dependencies=bottle,paramiko,scp
 
 What's working (Version 0.1):
 * SSH to remote server and retrieve a file
