@@ -8,6 +8,9 @@ This integration will require the creation of a new docker container image
 What's working (Version 0.1):
 * SSH to remote server and retrieve a file
 * Expose file via set port 
+* the integration exposes /refresh, so a file can be updated (recommended usage:
+
+        !http method=GET url=IP:PORT/refresh
 
 What's not working:
 * Auto restart and fetch file on remote file change
