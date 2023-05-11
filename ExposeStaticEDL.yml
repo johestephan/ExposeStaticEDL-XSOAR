@@ -45,14 +45,14 @@ configuration:
   defaultvalue: "8067"
   type: 0
   required: true
-- display: username
-  displaypassword: password
+- display: Username
+  displaypassword: Password
   name: credentials
   type: 9
   required: true
 script:
-  script: |+
-    from bottle import route, run, template, response
+  script: |-
+    from bottle import route, run, response
     import paramiko
     from paramiko import SSHClient
     from scp import SCPClient
@@ -78,22 +78,28 @@ script:
     def run_long_running(listen_port):
         run(host='0.0.0.0', port=listen_port, debug=True)
 
-    def main() -> None:
+    @route('/refresh')
+    def refetch():
         # fetch remote file and store
         ssh = SSHClient()
         ssh.load_system_host_keys()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         ssh.connect(str(remotehost), username=username, password=password)
-
         scp = SCPClient(ssh.get_transport())
-        scp.get(path+file)
+        scp.get(path + file)
 
+
+    def main() -> None:
         listen_port = demisto.params().get('longRunningPort')
         command = demisto.command()
 
         try:
+            refetch()
             if command == 'long-running-execution':
                 run_long_running(listen_port)
+            elif command == 'SCPtoEDL-refetch':
+                refetch()
+                return_results("Refreshed the file")
             elif command == 'test-module':
                 pass
             else:
@@ -105,12 +111,11 @@ script:
 
     if __name__ in ('__main__', '__builtin__', 'builtins'):
         main()
-
   type: python
   commands:
   - name: long-running-execution
     arguments: []
-  dockerimage: mypyexpose
+  dockerimage: demisto/scptoedl:latest
   runonce: true
   longRunning: true
   longRunningPort: true
