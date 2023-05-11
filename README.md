@@ -1,19 +1,18 @@
-# ExposeStaticEDL
+# ExposeStaticEDLv1
 This integration fetches a static file via SCP from a remote server and exposes the file to a specified port (static EDL, file display, etc)
 
 This integration will require the creation of a new docker container image
 
-    /docker_image_create name=demisto/scptoedl:latest base="demisto/python3-deb:3.8.2.6981" dependencies=bottle,paramiko,scp
+    /docker_image_create name=demisto/scptoedl:latest base="demisto/python3-deb:3.8.2.6981" dependencies=bottle,paramiko,scp,gunicorn
 
 What's working (Version 0.1):
 * SSH to remote server and retrieve a file
+* (v2) SSL via gunicorn
 * Expose file via set port 
 * the integration exposes /refresh, so a file can be updated (recommended usage:
 
         !http method=GET url=IP:PORT/refresh
 
-What's not working:
-* Auto restart and fetch file on remote file change
 
 Known Issues:
 * https://github.com/johestephan/ExposeStaticEDL-XSOAR/issues
