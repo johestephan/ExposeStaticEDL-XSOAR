@@ -1,0 +1,145 @@
+commonfields:
+  id: ExposeStaticEDLv2
+  version: -1
+vcShouldKeepItemLegacyProdMachine: false
+name: ExposeStaticEDLv2
+display: ExposeStaticEDLv2
+category: Utilities
+image: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAABRCAYAAABCIz1YAAAEz3RFWHRteGZpbGUAJTNDbXhmaWxlJTIwaG9zdCUzRCUyMkVsZWN0cm9uJTIyJTIwbW9kaWZpZWQlM0QlMjIyMDIzLTA1LTEwVDEwJTNBMDclM0E1Ni43NjNaJTIyJTIwYWdlbnQlM0QlMjI1LjAlMjAoTWFjaW50b3NoJTNCJTIwSW50ZWwlMjBNYWMlMjBPUyUyMFglMjAxMF8xNV83KSUyMEFwcGxlV2ViS2l0JTJGNTM3LjM2JTIwKEtIVE1MJTJDJTIwbGlrZSUyMEdlY2tvKSUyMGRyYXcuaW8lMkYxNS44LjclMjBDaHJvbWUlMkY5MS4wLjQ0NzIuMTY0JTIwRWxlY3Ryb24lMkYxMy42LjIlMjBTYWZhcmklMkY1MzcuMzYlMjIlMjB2ZXJzaW9uJTNEJTIyMTUuOC43JTIyJTIwZXRhZyUzRCUyMmJaVEV5UlJrc1N2Q0lGOEV2Yi1QJTIyJTIwdHlwZSUzRCUyMmRldmljZSUyMiUzRSUzQ2RpYWdyYW0lMjBpZCUzRCUyMmN3UFJScDFDeTVDLUdBWG5IWVp5JTIyJTNFeFZYQmJxTXdFUDBhanEwQUt5UTlCcExkUFd5bFNqbjBXRG14QVdzTlpvMUpTTCUyQiUyQll4aENIRksxcVNvMWh6QiUyQm5tRm0zcGhuanlSRiUyQjF2VEtuOVVqRXN2OUZucmtaVVhoa0hnUiUyRkN3eUxGSEZnOWhEMlJhTUhRYWdZMTQ1UWo2aURhQzhkcHhORXBKSXlvWDNLbXk1RHZqWUZScmRYRGRVaVhkckJYTiUyQkFUWTdLaWNvcyUyQkNtUnk3Q09jaiUyRm9lTExCOHlCOUZEdjFQUXdSazdxWFBLMU9FTUltdVBKRm9wMDF0Rm0zQnB5UnQ0NmVOJTJCdmJON0trenowbndtQUhuZlU5bGdiMWlYT1E3TjBycnFPVXhGeXlFc3prMGhZUm1BV1NsUm1vN01XZXpOVm9CUUtiSVNnQjBVd0RVQW91aklqRk5WR3B4a0VJNzRTaFFabENmRkZ2N3BhNk81cmJiU2ZDJTJGNEFheWxoVjRTcVJyMnNzbWglMkJQdDZuMEU0MXMyMTRlMjd2UWNuUnVFb2NsVndvNCUyRmdnZ0Z6bk1I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
+description: This integration fetches a static file via SCP from a remote server and
+  exposes the file to a specified port (static EDL, file display, etc)
+detaileddescription: "### Community Contributed Integration\n #### Integration Author:
+  Joerg Stephan (https://cybernotdienst.de)\n No support or maintenance is provided
+  by the author. Customers are encouraged to engage with the user community for questions
+  and guidance at the [Cortex XSOAR Live Discussions](https://live.paloaltonetworks.com/t5/cortex-xsoar-discussions/bd-p/Cortex_XSOAR_Discussions).\n***\n##
+  ExposeStaticEDL\n- Configure SSH credentials and remote file location\n-  Configure
+  port for exposure\n- Use curl to verify\n## Report issues\n- \n---\n[View Integration
+  Documentation](https://xsoar.pan.dev/docs/reference/integrations/hello-world)"
+configuration:
+- section: Connect
+  display: Incident type
+  name: incidentType
+  type: 13
+  required: false
+- display: ""
+  name: remote_host
+  defaultvalue: 192.168.1.24
+  type: 0
+  required: true
+- display: ""
+  name: remote_path
+  defaultvalue: /tmp/
+  type: 0
+  required: true
+- display: ""
+  name: remote_filename
+  defaultvalue: test.txt
+  type: 0
+  required: true
+- display: Long running instance
+  name: longRunning
+  type: 8
+  required: false
+- display: Port mapping (<port> or <host port>:<docker port>)
+  name: longRunningPort
+  defaultvalue: "8067"
+  type: 0
+  required: true
+- display: Username
+  displaypassword: Password
+  name: credentials
+  type: 9
+  required: true
+- display: Keyfile for HTTPS (server.key)
+  name: server.key
+  type: 12
+  required: false
+- display: Cerificate for HTTPS (server.crt)
+  name: server.crt
+  type: 12
+  required: false
+script:
+  script: |-
+    from bottle import route, run, response
+    import paramiko
+    from paramiko import SSHClient
+    from scp import SCPClient
+    import gunicorn
+
+    ThisEDL = ""
+    file = demisto.params().get('remote_filename')
+    path = demisto.params().get('remote_path')
+    remotehost = demisto.params().get('remote_host')
+    username = demisto.params().get('credentials').get('identifier')
+    password = demisto.params().get('credentials').get('password')
+
+
+    @route('/')
+    def index():
+        # expose the local stored file
+        edl = open(file, 'r')
+        ThisEDL = edl.read()
+        edl.close()
+        response.content_type = 'text/plain; charset=UTF8'
+        return str(ThisEDL)
+
+
+    def run_long_running(listen_port):
+        if demisto.params().get('server.key') is  None:
+            run(host='0.0.0.0', port=listen_port, debug=True)
+        else:
+            run(host='0.0.0.0', port=listen_port, debug=True, server='gunicorn',
+            keyfile='server.key', certfile='server.crt')
+
+    @route('/refresh')
+    def refetch():
+        # fetch remote file and store
+        ssh = SSHClient()
+        ssh.load_system_host_keys()
+        ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        ssh.connect(str(remotehost), username=username, password=password)
+        scp = SCPClient(ssh.get_transport())
+        scp.get(path + file)
+
+
+    def main() -> None:
+        listen_port = demisto.params().get('longRunningPort')
+        command = demisto.command()
+
+
+        if demisto.params().get('server.key') is not None:
+            keyfile = open('server.key', 'w')
+            keyfile.write(demisto.params().get('server.key'))
+            keyfile.close()
+
+            certfile = open('server.crt','w')
+            certfile.write(demisto.params().get('server.crt'))
+            certfile.close()
+
+        try:
+            refetch()
+            if command == 'long-running-execution':
+                run_long_running(listen_port)
+            elif command == 'SCPtoEDL-refetch':
+                refetch()
+                return_results("Refreshed the file")
+            elif command == 'test-module':
+                pass
+            else:
+                return_error('Command not found')
+
+        except Exception as e:
+            return_error(f'Failed to execute {demisto.command()} command.\nError:\n{str(e)}')
+
+
+    if __name__ in ('__main__', '__builtin__', 'builtins'):
+        main()
+  type: python
+  commands:
+  - name: long-running-execution
+    arguments: []
+  dockerimage: demisto/scptoedl:latest
+  runonce: true
+  longRunning: true
+  longRunningPort: true
+  subtype: python3
