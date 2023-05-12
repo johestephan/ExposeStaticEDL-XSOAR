@@ -24,6 +24,8 @@ Usage:
 * Port -> Exposed port of edl
 * SSH user 
 * SSH Password
+* Optional (v2)
+    * Set SSL keys for HTTPS 
 
 Support Level:
 * Community
