@@ -1,4 +1,4 @@
-# ExposeStaticEDLv1
+# ExposeStaticEDL (aka SCPtoEDL)
 This integration fetches a static file via SCP from a remote server and exposes the file to a specified port (static EDL, file display, etc)
 
 This integration will require the creation of a new docker container image
