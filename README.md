@@ -5,19 +5,20 @@ This integration will require the creation of a new docker container image
 
     /docker_image_create name=demisto/scptoedl:latest base="demisto/python3-deb:3.8.2.6981" dependencies=bottle,paramiko,scp,gunicorn
 
-What's working (Version 0.1):
+### What's working (Version v3):
 * SSH to remote server and retrieve a file
-* (v2) SSL via gunicorn
-* Expose file via set port 
+* (SSL via gunicorn
+* Expose file via set port
+* If "Long Running" is disabled or !SCPtoEDL-refetch is used, the remote file will be converted in to an line-by-line array, please use extend-context if needed 
 * the integration exposes /refresh, so a file can be updated (recommended usage:
 
         !http method=GET url=IP:PORT/refresh
 
 
-Known Issues:
+### Known Issues:
 * https://github.com/johestephan/ExposeStaticEDL-XSOAR/issues
 
-Usage:
+### Usage:
 * Remote host -> IP of server
 * Remote path -> path to file (ex. /tmp/)
 * Remote file -> filename (ex. test.txt)
@@ -26,8 +27,9 @@ Usage:
 * SSH Password
 * Optional (v2)
     * Set SSL keys for HTTPS 
+* Enable "Long Running Instance"
 
-Support Level:
+### Support Level:
 * Community
 * Process to get the integration into the Marketplace via Community contribution - pending
 
