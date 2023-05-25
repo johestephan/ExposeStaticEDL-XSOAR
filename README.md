@@ -7,9 +7,10 @@ This integration will require the creation of a new docker container image
 
 ### What's working (Version v3):
 * SSH to remote server and retrieve a file
-* (SSL via gunicorn
+* SSL via gunicorn
 * Expose file via set port
-* If "Long Running" is disabled or !SCPtoEDL-refetch is used, the remote file will be converted in to an line-by-line array, please use extend-context if needed 
+* If "Long Running" is disabled or !SCPtoEDL-refetch is used, the remote file will be converted in to an line-by-line array, please use extend-context if needed
+* Usage of SSL  
 * the integration exposes /refresh, so a file can be updated (recommended usage:
 
         !http method=GET url=IP:PORT/refresh
