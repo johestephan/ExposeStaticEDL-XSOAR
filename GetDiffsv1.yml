@@ -1,0 +1,30 @@
+commonfields:
+  id: e3e2abcc-51ce-43c0-8ddd-21ae8433121c
+  version: 4
+vcShouldKeepItemLegacyProdMachine: false
+name: GetDiffs
+script: |+
+  EDL = demisto.context().get("newDAG")
+  DAG = demisto.context().get("currentDAG")
+  EDLset = set(EDL)
+
+  DAGset = set(DAG)
+
+  elements_to_remove = DAGset.difference(EDLset)
+  demisto.setContext("ElementsToRemove", {"Contents": list(elements_to_remove),"ReadableContentsFormat": formats["text"]})
+
+
+  elements_to_add = EDLset.difference(DAGset)
+  demisto.setContext("ElementsToAdd", {"Contents": list(elements_to_add), "ReadableContentsFormat": formats["text"]})
+
+type: python
+tags: []
+enabled: true
+scripttarget: 0
+subtype: python3
+pswd: ""
+runonce: false
+dockerimage: demisto/python3:3.10.11.61265
+runas: DBotWeakRole
+engineinfo: {}
+mainengineinfo: {}
