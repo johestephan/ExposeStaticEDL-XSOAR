@@ -14,7 +14,14 @@ This integration will require the creation of a new docker container image
 * the integration exposes /refresh, so a file can be updated (recommended usage:
 
         !http method=GET url=IP:PORT/refresh
+        
+### GetDiffs Script (v1)
+GetDiffs can be used to compare two different lists, currently it expects to have two lists available in the context data
+* newDAG
+* currentDAG
+and the script will identify which items to add or remove from the list.
 
+        !GetDiffs
 
 ### Known Issues:
 * https://github.com/johestephan/ExposeStaticEDL-XSOAR/issues
