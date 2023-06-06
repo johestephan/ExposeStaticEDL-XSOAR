@@ -19,6 +19,7 @@ This integration will require the creation of a new docker container image
 GetDiffs can be used to compare two different lists, currently it expects to have two lists available in the context data
 * newDAG
 * currentDAG
+
 and the script will identify which items to add or remove from the list.
 
         !GetDiffs
